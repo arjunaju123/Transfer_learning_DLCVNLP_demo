@@ -28,8 +28,16 @@ pip install -r requirements.txt
 
 ### STEP 06- commit and push the changes to the remote repository
 
-## Observe
+##############################################################
 
-* Use time module to observe the training time of the training
-* Check with sigmoid function in the output layer by using single unit, loss function binary crossentropy
-* Observe the starting accuracy of training
+# OBSERVATIONS
+
+## * Use time module to observe the training time of the training 
+
+### Transfer learning model is faster than base model created from scratch
+
+## * Check with sigmoid function in the output layer by using single unit, loss function binary crossentropy
+### It is been obeserved that softmax gives a slight more accyracy than sigmoid in both training and evaluation
+## * Observe the starting accuracy of training 
+
+### Starting accuracy of transfer learning model is better than base model from scratch
