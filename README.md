@@ -27,3 +27,9 @@ pip install -r requirements.txt
 ```
 
 ### STEP 06- commit and push the changes to the remote repository
+
+## Observe
+
+* Use time module to observe the training time of the training
+* Check with sigmoid function in the output layer by using single unit, loss function binary crossentropy
+* Observe the starting accuracy of training

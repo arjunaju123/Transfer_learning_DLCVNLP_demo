@@ -6,6 +6,7 @@ import logging
 from src.utils.common import read_yaml, create_directories
 import tensorflow as tf
 import io # To log the summary also
+import time
 
 
 STAGE = "Transfer learning" ## <<< change stage name 
@@ -109,7 +110,17 @@ def main(config_path):
     EPOCHS = 10
     VALIDATION_SET = (X_valid, y_valid_bin) # y_valid_bin and y_train_bin for our use case
 
+    # record start time
+    start = time.time()
+
     history = new_model.fit(X_train, y_train_bin, epochs=EPOCHS, validation_data=VALIDATION_SET,verbose=2)
+
+    end = time.time()
+
+    print("The time of execution of training the transfer learning model is :",
+    (end-start) * 10**3, "ms")
+
+    logging.info(f"The time of execution of training the transfer learning model is :{(end-start) * 10**3} ms")
 
     ## Save the base model 
 
