@@ -63,6 +63,29 @@ def main(config_path):
 
     model.summary()
 
+
+    ## Train the model
+
+    EPOCHS = 10
+    VALIDATION_SET = (X_valid, y_valid)
+
+    history = model.fit(X_train, y_train, epochs=EPOCHS, validation_data=VALIDATION_SET,verbose=2)
+
+    ## Save the base model
+
+    model_dir_path = os.path.join("artifacts","models") #INside artifacts models directory is made
+
+    create_directories([model_dir_path])
+
+    model_file_path = os.path.join(model_dir_path,"base_model.h5")
+
+    model.save(model_file_path)
+
+    logging.info(f"Base model is saved at {model_file_path}")
+
+    logging.info(f"Evaluation metrics {model.evaluate(X_test,y_test)}")
+
+
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
     args.add_argument("--config", "-c", default="configs/config.yaml")

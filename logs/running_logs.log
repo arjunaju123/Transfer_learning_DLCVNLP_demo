@@ -23,3 +23,20 @@ AttributeError: module 'keras.api._v2.keras' has no attribute 'optimizer'
 [2022-11-12 13:06:14,497: INFO: common]: yaml file: configs/config.yaml loaded successfully
 [2022-11-12 13:06:15,985: INFO: 01_base_model_creation]: >>>>> stage Creating Base model completed!<<<<<
 
+[2022-11-12 13:23:46,173: INFO: 01_base_model_creation]: 
+********************
+[2022-11-12 13:23:46,173: INFO: 01_base_model_creation]: >>>>> stage Creating Base model started <<<<<
+[2022-11-12 13:23:46,174: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-11-12 13:25:10,283: INFO: common]: created directory at: artifacts\models
+[2022-11-12 13:25:10,867: INFO: 01_base_model_creation]: Base model is saved at artifacts\models\base_model.h5
+[2022-11-12 13:25:10,908: INFO: 01_base_model_creation]: >>>>> stage Creating Base model completed!<<<<<
+
+[2022-11-12 13:31:24,833: INFO: 01_base_model_creation]: 
+********************
+[2022-11-12 13:31:24,833: INFO: 01_base_model_creation]: >>>>> stage Creating Base model started <<<<<
+[2022-11-12 13:31:24,834: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-11-12 13:31:54,045: INFO: common]: created directory at: artifacts\models
+[2022-11-12 13:31:54,240: INFO: 01_base_model_creation]: Base model is saved at artifacts\models\base_model.h5
+[2022-11-12 13:31:54,763: INFO: 01_base_model_creation]: Evaluation metrics [0.3114294707775116, 0.9139000177383423]
+[2022-11-12 13:31:54,798: INFO: 01_base_model_creation]: >>>>> stage Creating Base model completed!<<<<<
+
