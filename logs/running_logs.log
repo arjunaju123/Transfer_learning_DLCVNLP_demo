@@ -409,3 +409,157 @@ _________________________________________________________________
 [2022-11-12 23:20:27,697: INFO: 02_transfer_learning_even_odd]: Evaluation metrics [0.2909659445285797, 0.8797000050544739]
 [2022-11-12 23:20:27,736: INFO: 02_transfer_learning_even_odd]: >>>>> stage Transfer learning completed!<<<<<
 
+[2022-11-13 00:00:08,859: INFO: 01.02_base_model_creation_bin_and_output_sigmoid]: 
+********************
+[2022-11-13 00:00:08,860: INFO: 01.02_base_model_creation_bin_and_output_sigmoid]: >>>>> stage Creating binary model from scratch started <<<<<
+[2022-11-13 00:00:08,864: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-11-13 00:00:13,339: INFO: 01.02_base_model_creation_bin_and_output_sigmoid]: Creating binary model from scratch summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputLayer (Dense)         (None, 1)                 101       
+                                                                 
+=================================================================
+Total params: 265,701
+Trainable params: 265,701
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-11-13 00:01:57,469: INFO: 01.02_base_model_creation_bin_and_output_sigmoid]: The time of execution of training the binary base model is :104129.12392616272 ms
+[2022-11-13 00:01:57,470: INFO: common]: created directory at: artifacts\models
+[2022-11-13 00:01:57,911: INFO: 01.02_base_model_creation_bin_and_output_sigmoid]: Base model is saved at artifacts\models\bin_scratch_model.h5
+[2022-11-13 00:01:59,197: INFO: 01.02_base_model_creation_bin_and_output_sigmoid]: Evaluation metrics [0.21030759811401367, 0.923799991607666]
+[2022-11-13 00:01:59,255: INFO: 01.02_base_model_creation_bin_and_output_sigmoid]: >>>>> stage Creating binary model from scratch completed!<<<<<
+
+[2022-11-13 00:03:54,719: INFO: 01.01_base_model_creation_bin]: 
+********************
+[2022-11-13 00:03:54,719: INFO: 01.01_base_model_creation_bin]: >>>>> stage Creating binary model from scratch started <<<<<
+[2022-11-13 00:03:54,723: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-11-13 00:03:56,851: INFO: 01.01_base_model_creation_bin]: Creating binary model from scratch summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputLayer (Dense)         (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 265,802
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-11-13 00:05:29,576: INFO: 01.01_base_model_creation_bin]: The time of execution of training the binary base model is :92724.44128990173 ms
+[2022-11-13 00:05:29,577: INFO: common]: created directory at: artifacts\models
+[2022-11-13 00:05:29,991: INFO: 01.01_base_model_creation_bin]: Base model is saved at artifacts\models\bin_scratch_model.h5
+[2022-11-13 00:05:30,938: INFO: 01.01_base_model_creation_bin]: Evaluation metrics [0.172263041138649, 0.9383000135421753]
+[2022-11-13 00:05:30,986: INFO: 01.01_base_model_creation_bin]: >>>>> stage Creating binary model from scratch completed!<<<<<
+
+[2022-11-13 00:10:18,674: INFO: 02_transfer_learning_even_odd]: 
+********************
+[2022-11-13 00:10:18,674: INFO: 02_transfer_learning_even_odd]: >>>>> stage Transfer learning started <<<<<
+[2022-11-13 00:10:18,678: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-11-13 00:10:20,980: INFO: 02_transfer_learning_even_odd]: Loaded base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputLayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-11-13 00:10:21,130: INFO: 02_transfer_learning_even_odd]: Loaded new Transfer learning model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ output_layer (Dense)        (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 202
+Non-trainable params: 265,600
+_________________________________________________________________
+
+[2022-11-13 00:11:29,197: INFO: 02_transfer_learning_even_odd]: The time of execution of training the transfer learning model is :68053.21979522705 ms
+[2022-11-13 00:11:29,476: INFO: 02_transfer_learning_even_odd]: Base model is saved at artifacts\models\even_odd_model.h5
+[2022-11-13 00:11:30,739: INFO: 02_transfer_learning_even_odd]: Evaluation metrics [0.28790587186813354, 0.8809000253677368]
+[2022-11-13 00:11:30,776: INFO: 02_transfer_learning_even_odd]: >>>>> stage Transfer learning completed!<<<<<
+
+[2022-11-13 00:11:57,505: INFO: 01.01_base_model_creation_bin]: 
+********************
+[2022-11-13 00:11:57,505: INFO: 01.01_base_model_creation_bin]: >>>>> stage Creating binary model from scratch started <<<<<
+[2022-11-13 00:11:57,508: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-11-13 00:11:59,301: INFO: 01.01_base_model_creation_bin]: Creating binary model from scratch summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputLayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenLayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenLayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputLayer (Dense)         (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 265,802
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-11-13 00:13:27,333: INFO: 01.01_base_model_creation_bin]: The time of execution of training the binary base model is :88031.87823295593 ms
+[2022-11-13 00:13:27,334: INFO: common]: created directory at: artifacts\models
+[2022-11-13 00:13:27,524: INFO: 01.01_base_model_creation_bin]: Base model is saved at artifacts\models\bin_scratch_model.h5
+[2022-11-13 00:13:28,893: INFO: 01.01_base_model_creation_bin]: Evaluation metrics [0.17436759173870087, 0.9375]
+[2022-11-13 00:13:28,935: INFO: 01.01_base_model_creation_bin]: >>>>> stage Creating binary model from scratch completed!<<<<<
+
